@@ -1,0 +1,6 @@
+[book]
+authors = ["Alexey Goloburdin"]
+language = "ru"
+multilingual = false
+src = "src"
+title = "Типизированный Python для профессиональной разработки"
