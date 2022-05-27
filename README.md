@@ -6,10 +6,8 @@
 Книга собирается в [HTML](https://to.digital/typed-python) с помощью
 [mdbook](https://rust-lang.github.io/mdBook/).
 
-[Книга в красивой PDFке](https://t.me/t0digital/151). PDF был собран с
+* [Книга в красивой PDFке](https://t.me/t0digital/151). PDF был собран с
 помощью [Obsidian.md](https://obsidian.md/), в нём же происходило написание
 материала.
-
-[Книга для чтения из браузера](https://to.digital/typed-python)
-
-[Видео версия](https://www.youtube.com/watch?v=dKxiHlZvULQ)
+* [Веб-версия](https://to.digital/typed-python/)
+* [Видео версия](https://www.youtube.com/watch?v=dKxiHlZvULQ)
