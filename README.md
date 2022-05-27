@@ -1,8 +1,12 @@
 # Типизированный Python для профессиональной разработки
 
 Здесь лежат md файлы книги «Типизированный Python для профессиональной разработки».
+Книга собирается в [HTML](https://to.digital/typed-python) с помощью
+[mdbook](https://rust-lang.github.io/mdBook/).
 
-[Книга в красивой PDFке](https://t.me/t0digital/151)
+[Книга в красивой PDFке](https://t.me/t0digital/151). PDF был собран с
+помощью [Obsidian.md](https://obsidian.md/), в нём же происходило написание
+материала.
 
 [Книга для чтения из браузера](https://to.digital/typed-python)
 
