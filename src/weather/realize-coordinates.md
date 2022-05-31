@@ -1,6 +1,6 @@
 # Реализация приложения — получение GPS координат
 
-Реализуем в первую очередь получение GPS координат, `get_gps_coordinates.py`:
+Реализуем в первую очередь получение GPS-координат, `get_gps_coordinates.py`:
 
 ```python
 from dataclasses import dataclass

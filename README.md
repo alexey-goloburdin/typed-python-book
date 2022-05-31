@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/alexey-goloburdin/typed-python-book/main/src/images/cover.png" width="400">
 
-Здесь лежат md файлы книги «Типизированный Python для профессиональной разработки».
+Здесь лежат md-файлы книги «Типизированный Python для профессиональной разработки».
 Книга собирается в [HTML](https://to.digital/typed-python) с помощью
 [mdbook](https://rust-lang.github.io/mdBook/).
 

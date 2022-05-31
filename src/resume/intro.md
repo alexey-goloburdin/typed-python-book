@@ -7,8 +7,8 @@
 ## Контакты
 
 У нас много хороших материалов в YouTube, если вдруг ты ещё не подписан — 
-[YouTube канал Диджитализируй!](https://www.youtube.com/channel/UC9MK8SybZcrHR3CUV4NMy2g) 
+[YouTube-канал Диджитализируй!](https://www.youtube.com/channel/UC9MK8SybZcrHR3CUV4NMy2g) 
 
-Много оперативной и текстовой полезной информации — в [Telegram канале](https://t.me/t0digital)!
+Много оперативной и текстовой полезной информации — в [Telegram-канале](https://t.me/t0digital)!
 
-Также, конечно, есть [VK группа](https://vk.com/digitalize.team) и [Дзен](https://zen.yandex.ru/id/6235d32cb64df01e6e78c883).
+Также, конечно, есть [VK-группа](https://vk.com/digitalize.team) и [Дзен](https://zen.yandex.ru/id/6235d32cb64df01e6e78c883).
