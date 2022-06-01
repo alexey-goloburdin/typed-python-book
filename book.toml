@@ -4,3 +4,7 @@ language = "ru"
 multilingual = false
 src = "src"
 title = "Типизированный Python для профессиональной разработки"
+
+[output.html]
+
+[output.pdf]
