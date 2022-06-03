@@ -43,7 +43,7 @@
 - `Union`, `Optional`,
 - `Iterable`, `Sequence`, `Mapping`,
 - `Callable`,
-- `TypeVar` и др.
+- `TypeVar`, `TypeAlias` и др.
 
 Напишем приложение погоды, используя эти типы и поясняя по ходу некоторые архитектурные моменты выбора того или иного подхода. [Смотри видео версию этой книги на YouTube](https://www.youtube.com/channel/UC9MK8SybZcrHR3CUV4NMy2g) и читай обязательно до конца.
 

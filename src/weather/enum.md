@@ -155,10 +155,11 @@ smth(WeatherTypeStrEnum.FOG)  # Ок, всё в порядке
 from datetime import datetime
 from dataclasses import dataclass
 from enum import Enum
+from typing import TypeAlias
 
 from coordinates import Coordinate
 
-Celsius = int
+Celsius: TypeAlias = int
 
 class WeatherType(str, Enum):
     THUNDERSTORM = "Гроза"

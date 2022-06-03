@@ -41,10 +41,11 @@ def get_weather(coordinates: Coordinate):
 ```python
 from dataclasses import dataclass
 from datetime import datetime
+from typing import TypeAlias
 
 from coordinates import Coordinate
 
-Celsius = int
+Celsius: TypeAlias  = int
 
 @dataclass(slots=True, frozen=True)
 class Weather:
@@ -59,6 +60,6 @@ def get_weather(coordinates: Coordinate):
     pass
 ```
 
-Обратите внимание, как я обошёлся с температурой. Можно было прописать тип напрямую `int`, но я сделал *alias*, то есть псевдоним, для `int` с названием `Celsius` и теперь понятно, что у нас температура тут будет именно в градусах Цельсия, а не Фаренгейта или Кельвина.
+Обратите внимание, как я обошёлся с температурой. Можно было прописать тип напрямую `int`, но я сделал *alias*, то есть псевдоним, для `int` с названием `Celsius` и теперь понятно, что у нас температура тут будет именно в градусах Цельсия, а не Фаренгейта или Кельвина. Тип `TypeAlias` как раз предназначен для указания таких *алиасов* типов.
 
 Также, если какая-то функция будет принимать на вход или возвращать температуру, то мы тоже укажем для температуры там конкретный тип `Celsius`, а не общий непонятный `int`.

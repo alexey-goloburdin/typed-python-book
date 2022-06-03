@@ -26,7 +26,7 @@ from enum import Enum
 import json
 from json.decoder import JSONDecodeError
 import ssl
-from typing import Literal
+from typing import Literal, TypeAlias
 import urllib.request
 from urllib.error import URLError
 
@@ -34,7 +34,7 @@ from coordinates import Coordinates
 import config
 from exceptions import ApiServiceError
 
-Celsius = int
+Celsius: TypeAlias = int
 
 class WeatherType(str, Enum):
     THUNDERSTORM = "Гроза"
