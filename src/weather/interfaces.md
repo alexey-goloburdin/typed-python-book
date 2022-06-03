@@ -33,7 +33,7 @@ def save_weather(weather: Weather, storage: WeatherStorage) -> None:
 class PlainFileWeatherStorage(WeatherStorage):
     pass
 
-srorage = PlainFileWeatherStorage()
+storage = PlainFileWeatherStorage()
 storage.save()  # Тут в runtime упадёт ошибка NotImplementedError
 ```
 
