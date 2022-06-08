@@ -8,13 +8,13 @@
 
 ```python
 #!/usr/bin/env python3.10
-from coordinates import get_coordinates
+from coordinates import get_gps_coordinates
 from weather_api_service import get_weather
 from weather_formatter import format_weather
 
 
 def main():
-    coordinates = get_coordinates()
+    coordinates = get_gps_coordinates()
     weather = get_weather(coordinates)
     print(format_weather(weather))
 
@@ -23,11 +23,11 @@ if __name__ == "__main__":
     main()
 ```
 
-То есть фактическая реализация логики будет инкапсулирована, то есть заключена в отдельные Python модули `gps_coordinates`, `weather_api_service` и `weather_formatter`, а модуль `weather` будет просто точкой входа в приложение, запускающей логику.
+То есть фактическая реализация логики будет инкапсулирована, то есть заключена в отдельные Python модули `coordinates`, `weather_api_service` и `weather_formatter`, а модуль `weather` будет просто точкой входа в приложение, запускающей логику.
 
 Обратите внимание — при таком подходе у нас изначально не получится ситуации, что вся логика написана в одной каше, например, вообще без функций или в одной длинной километровой функции. Мы подумали о слоях нашего приложения, для каждого слоя создали отдельное место, в нашем случае Python модуль, но впоследствии можно расширить до Python пакета, и теперь будем создавать функции, в которые ляжет бизнес-логика нашего приложения.
 
-Файл `gps_coordinates.py`:
+Файл `coordinates.py`:
 
 ```python
 def get_gps_coordinates():

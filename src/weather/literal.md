@@ -9,11 +9,11 @@ def get_gps_coordinates() -> dict[Literal["longitude"] | Literal["latitude"], fl
     return {"longitude": 10, "latitude": 20}
 
 print(
-    get_gps_coordinates["longitude"]
+    get_gps_coordinates()["longitude"]
 )
 
 print(
-    get_gps_coordinates["longitudeRRR"]  # Тут IDE покажет ошибку!
+    get_gps_coordinates()["longitudeRRR"]  # Тут IDE покажет ошибку!
 )
 ```
 
