@@ -2,7 +2,7 @@
 
 После нашего отступления о структурах продолжим накидывать каркас приложения.
 
-В `gps_coordinates.py` оставим структуру `dataclass` с параметрами `slots` и `frozen`, потому что не предусматривается изменение координат, которые вернёт нам GPS-датчик на ноутбуке.
+В `coordinates.py` оставим структуру `dataclass` с параметрами `slots` и `frozen`, потому что не предусматривается изменение координат, которые вернёт нам GPS-датчик на ноутбуке.
 
 ```python
 from dataclasses import dataclass
@@ -12,18 +12,18 @@ class Coordinates:
     longitude: float
     latitude: float
 
-def get_coordinates() -> Coordinates:
+def get_gps_coordinates() -> Coordinates:
     return Coordinates(longitude=10, latitude=20)
 ```
 
-Возвращаемое значение вставили пока, просто чтобы не ругались проверки в редакторе. Потом напишем реализацию, которая запросит координаты у команды `whereami`, распарсит её результаты и вернёт как результат функции `get_coordinates`.
+Возвращаемое значение вставили пока, просто чтобы не ругались проверки в редакторе. Потом напишем реализацию, которая запросит координаты у команды `whereami`, распарсит её результаты и вернёт как результат функции `get_gps_coordinates`.
 
 Составим `weather_api_service.py`:
 
 ```python
-from coordinates import Coordinate
+from coordinates import Coordinates
 
-def get_weather(coordinates: Coordinate):
+def get_weather(coordinates: Coordinates):
     """Requests weather in OpenWeather API and returns it"""
     pass
 ```
@@ -43,9 +43,9 @@ from dataclasses import dataclass
 from datetime import datetime
 from typing import TypeAlias
 
-from coordinates import Coordinate
+from coordinates import Coordinates
 
-Celsius: TypeAlias  = int
+Celsius: TypeAlias = int
 
 @dataclass(slots=True, frozen=True)
 class Weather:
@@ -55,7 +55,7 @@ class Weather:
     sunset: datetime
     city: str
 
-def get_weather(coordinates: Coordinate):
+def get_weather(coordinates: Coordinates):
     """Requests weather in OpenWeather API and returns it"""
     pass
 ```

@@ -157,7 +157,7 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import TypeAlias
 
-from coordinates import Coordinate
+from coordinates import Coordinates
 
 Celsius: TypeAlias = int
 
@@ -178,7 +178,7 @@ class Weather:
     sunset: datetime
     city: str
 
-def get_weather(coordinates: Coordinate) -> Weather:
+def get_weather(coordinates: Coordinates) -> Weather:
     """Requests weather in OpenWeather API and returns it"""
     return Weather(
        temperature=20,
