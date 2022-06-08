@@ -22,7 +22,7 @@
         - [Dataclass](./weather/dataclass.md)
         - [Alias для типа](./weather/alias.md)
         - [Enum](./weather/enum.md)
-    - [Реализация приложения — получение GPS координат](./weather/realize-coordinates.md)
+    - [Реализация приложения — получение GPS-координат](./weather/realize-coordinates.md)
     - [Реализация приложения — получение погоды с API OpenWeather](./weather/realize-openweather.md)
     - [Реализация приложения — принтер погоды](./weather/realize-printer.md)
     - [Обработка исключений](./weather/exceptions.md)
@@ -39,7 +39,7 @@
     - [Контейнеры — Iterable, Sequence, Mapping и другие](./additional/containers.md)
     - [Дженерики](./additional/generics.md)
     - [Вызываемые объекты](./additional/callable.md)
-    - [Stub файлы и работа с нетипизированными библиотеками](./additional/stub.md)
+    - [Stub-файлы и работа с нетипизированными библиотеками](./additional/stub.md)
     - [Подсказки типов нужны только в функциях?](./additional/question.md)
 
 # Резюме

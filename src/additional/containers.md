@@ -18,8 +18,8 @@ users = [
 
 def get_younger_user(users: list[User]) -> User:
     if not users: raise ValueError("empty users!")
-    sorded_users = sorted(users, key=lambda x: x.birthday)
-    return sorded_users[0]
+    sorted_users = sorted(users, key=lambda x: x.birthday)
+    return sorted_users[0]
 
 print(get_younger_user(users))
 # User(birthday=datetime.datetime(1985, 7, 29, 0, 0))
@@ -47,8 +47,8 @@ users = (  # сменили на tuple
 
 def get_younger_user(users: list[User]) -> User:
     """Возвращает самого молодого пользователя из списка"""
-    sorded_users = sorted(users, key=lambda x: x.birthday)
-    return sorded_users[0]
+    sorted_users = sorted(users, key=lambda x: x.birthday)
+    return sorted_users[0]
 
 
 print(get_younger_user(users))  # тут видна ошибка в pyright!
@@ -63,8 +63,8 @@ from typing import Iterable
 
 def get_younger_user(users: Iterable[User]) -> User | None:
     if not users: return None
-    sorded_users = sorted(users, key=lambda x: x.birthday)
-    return sorded_users[0]
+    sorted_users = sorted(users, key=lambda x: x.birthday)
+    return sorted_users[0]
 ```
 
 И теперь всё в порядке. Мы можем передать любую итерируемую структуру, элементами которой являются экземпляры `User`.
@@ -78,15 +78,15 @@ def get_younger_user(users: Sequence[User]) -> User | None:
     """Возвращает самого молодого пользователя из списка"""
     if not users: return None
     print(users[0])
-    sorded_users = sorted(users, key=lambda x: x.birthday)
-    return sorded_users[0]
+    sorted_users = sorted(users, key=lambda x: x.birthday)
+    return sorted_users[0]
 ```
 
 Теперь всё в порядке. В `Sequence` можно обращаться к элементам по индексу.
 
 Ещё один важный вопрос тут. А зачем использовать `Iterable` или `Sequence`, если можно просто перечислить разные типы контейнеров? Ну их же ограниченное количество — там `list`, `tuple`, `set`, `dict.` Для чего нам тогда общие типы `Iterable` и `Sequence`?
 
-На самом деле таких типов контейнеров, по которым можно итерироваться, вовсе не ограниченное число. Например, можно создать свой контейнер, по которому можно будет итерироваться, но при этом этот тип не будет наследовать ничего из вышеперечисленного типа `list`, `dict` и тп:
+На самом деле таких типов контейнеров, по которым можно итерироваться, вовсе не ограниченное число. Например, можно создать свой контейнер, по которому можно будет итерироваться, но при этом этот тип не будет наследовать ничего из вышеперечисленного типа `list`, `dict` и т. п.:
 
 ```python
 from typing import Sequence
@@ -134,7 +134,7 @@ smth({
 
 ```
 
-> **Важно:** по возможности вместо указания в типах `list`, `dict` и тп указывай классы `Iterable`, `Sequence`, `Mapping`.
+> **Важно:** по возможности вместо указания в типах `list`, `dict` и т. п. указывай классы `Iterable`, `Sequence`, `Mapping`.
 > 
 > Во-первых, это позволит менять конкретные реализации, удовлетворяющие условию итерабельности, доступа по индексу или доступа по ключу соответственно, решение получится более гибким.
 > 
