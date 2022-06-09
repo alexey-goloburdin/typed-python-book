@@ -15,8 +15,8 @@
 
 Этот материал есть также в видео формате на моём YouTube — [«Диджитализируй!»](https://www.youtube.com/watch?v=dKxiHlZvULQ).
 
-<div style="text-align: center">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/dKxiHlZvULQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="text-align: center; max-width: 100%;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dKxiHlZvULQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="max-width: 100%;"></iframe>
 </div>
 
 Также обращаю внимание, что на момент написания этих строк готовится перезапуск моего авторского курса «Основы компьютерных и веб-технологий на Python» [course01.to.digital](https://course01.to.digital/), запуск планируется в июне 2022, если ты читаешь этот материал позже, то вполне вероятно, что на курс уже снова можно записаться.
