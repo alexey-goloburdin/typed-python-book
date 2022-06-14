@@ -4,7 +4,7 @@
 
 ```python
 from dataclasses import dataclass
-from subprocess import Popen, PIPE
+from subprocess import check_output
 
 from exceptions import CantGetCoordinates
 
@@ -15,10 +15,9 @@ class Coordinates:
 
 def get_gps_coordinates() -> Coordinates:
     """Returns current coordinates using MacBook GPS"""
-    process = Popen(["whereami"], stdout=PIPE)
-    (output, err) = process.communicate()
-    exit_code = process.wait()
-    if err is not None or exit_code != 0:
+    try:
+        output = check_output("whereami")
+    except Exception:  
         raise CantGetCoordinates
     output_lines = output.decode().strip().lower().split("\n")
     latitude = longitude = None
@@ -56,7 +55,7 @@ USE_ROUNDED_COORDS = True
 
 ```python
 from dataclasses import dataclass
-from subprocess import Popen, PIPE
+from subprocess import check_output
 
 import config
 from exceptions import CantGetCoordinates
@@ -68,10 +67,9 @@ class Coordinates:
 
 def get_gps_coordinates() -> Coordinates:
     """Returns current coordinates using MacBook GPS"""
-    process = Popen(["whereami"], stdout=PIPE)
-    output, err = process.communicate()
-    exit_code = process.wait()
-    if err is not None or exit_code != 0:
+    try:
+        output = check_output("whereami")
+    except Exception:  
         raise CantGetCoordinates
     output_lines = output.decode().strip().lower().split("\n")
     latitude = longitude = None
@@ -94,7 +92,7 @@ if __name__ == "__main__":
 
 ```python
 from dataclasses import dataclass
-from subprocess import Popen, PIPE
+from subprocess import check_output
 from typing import Literal
 
 import config
@@ -115,17 +113,16 @@ def _get_whereami_coordinates() -> Coordinates:
     coordinates = _parse_coordinates(whereami_output)
     return coordinates
 
-def _get_whereami_output() -> bytes:
-    process = Popen(["whereami"], stdout=PIPE)
-    output, err = process.communicate()
-    exit_code = process.wait()
-    if err is not None or exit_code != 0:
+def _get_whereami_output() -> str:
+    try:
+        output = check_output("whereami")
+    except Exception:  
         raise CantGetCoordinates
     return output
 
-def _parse_coordinates(whereami_output: bytes) -> Coordinates:
+def _parse_coordinates(whereami_output: str) -> Coordinates:
     try:
-        output = whereami_output.decode().strip().lower().split("\n")
+        output = whereami_output.strip().lower().split("\n")
     except UnicodeDecodeError:
         raise CantGetCoordinates
     return Coordinates(
