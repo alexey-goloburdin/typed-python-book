@@ -94,7 +94,7 @@ def save_weather(weather: Weather, storage: WeatherStorage) -> None:
 ```python
 from datetime import datetime
 from pathlib import Path
-from typine import Protocol
+from typing import Protocol
 
 from weather_api_service import Weather
 from weather_formatter import format_weather
